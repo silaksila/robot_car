@@ -11,21 +11,21 @@ def setup():
 
 def measure_distance():
     # set Trigger to HIGH
-    GPIO.output(GPIO_TRIGGER, True)
+    GPIO.output(18, True)
 
     # set Trigger after 0.01ms to LOW
     time.sleep(0.00001)
-    GPIO.output(GPIO_TRIGGER, False)
+    GPIO.output(18, False)
 
     StartTime = time.time()
     StopTime = time.time()
 
     # save StartTime
-    while GPIO.input(GPIO_ECHO) == 0:
+    while GPIO.input(17) == 0:
         StartTime = time.time()
 
     # save time of arrival
-    while GPIO.input(GPIO_ECHO) == 1:
+    while GPIO.input(17) == 1:
         StopTime = time.time()
 
     # time difference between start and arrival
@@ -42,3 +42,4 @@ def distance_is_lower(leng):
         print("Close!!!")
         return True
     return False
+
