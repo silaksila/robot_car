@@ -1,4 +1,4 @@
-from typing_extensions import runtime
+
 import RPi.GPIO as GPIO
 import keyboard
 import time
