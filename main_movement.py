@@ -106,16 +106,11 @@ try:
 
         if char == ord('a'):  # turn left
             volant.ChangeDutyCycle(10)
-            while char == ord('a'):
-                time.sleep(0.1)
-                char = screen.getch()
+            time.sleep(0.5)
             volant.ChangeDutyCycle(6.5)
         elif char == ord('d'):  # turn righ
             volant.ChangeDutyCycle(2)
-            while char == ord('d'):
-                time.sleep(0.1)
-                char = screen.getch()
-
+            time.sleep(0.5)
             volant.ChangeDutyCycle(6.5)
         else:
             volant.ChangeDutyCycle(6.5)
