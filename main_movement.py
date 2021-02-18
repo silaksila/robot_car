@@ -105,16 +105,17 @@ try:
             stop()
 
         if char == ord('a'):  # turn left
-            while char != curses.KEY_UP:
-                volant.ChangeDutyCycle(10)
+            volant.ChangeDutyCycle(10)
+            while char == ord('a'):
                 char = screen.getch()
-            time.sleep(0.1)
+                time.sleep(0.1)
             volant.ChangeDutyCycle(6.5)
         elif char == ord('d'):  # turn righ
-            while char != curses.KEY_UP:
-                volant.ChangeDutyCycle(2)
+            volant.ChangeDutyCycle(2)
+            while char == ord('d'):
                 char = screen.getch()
-            time.sleep(0.1)
+                time.sleep(0.1)
+
             volant.ChangeDutyCycle(6.5)
         else:
             volant.ChangeDutyCycle(6.5)
