@@ -17,7 +17,7 @@ try:
             break
         servo.ChangeDutyCycle(10)
         time.sleep(1)
-        servo.ChangeDutyCycle(6)
+        servo.ChangeDutyCycle(6.5)
         print(num)
         time.sleep(1)
         num+= 1
