@@ -10,7 +10,7 @@ screen = curses.initscr()
 curses.noecho()
 curses.cbreak()
 screen.keypad(True)
-
+screen.nodelay()
 ######
 distance_sensor.setup()
 # GPIO numbering
